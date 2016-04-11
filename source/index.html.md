@@ -41,3 +41,6 @@ You must replace <code>myapikey</code> with your personal API key.
 ## Login a user
 ## Account Verification
 ## Resending Verification Code
+## Password Reset
+## Changing Password
+## Updating User
