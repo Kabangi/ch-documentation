@@ -5,6 +5,7 @@
 Remember to send access_token(client) along
 
 `POST /users`
+
 Parameter | Type | Description
 ---------- | ------- | --------
 username | String | User username
