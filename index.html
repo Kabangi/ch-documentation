@@ -140,11 +140,26 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST /oauth/client/access-token</code>
-Parameter | Type | Description
-&mdash;&mdash;&mdash;- | &mdash;&mdash;- | &mdash;&mdash;&ndash;
-client_id | String | Your client id
-client_secret | String | Your client secret</p>
+<p><code class="prettyprint">POST /oauth/client/access-token</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>String</td>
+<td>Your client id</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>String</td>
+<td>Your client secret</td>
+</tr>
+</tbody></table>
 <pre class="highlight shell"><code>curl <span class="s2">"https://api.connecthealth.io/v1/oauth/client/access-token"</span>
   -H <span class="s2">"Authorization: access_token"</span>
 </code></pre>
@@ -159,6 +174,34 @@ client_secret | String | Your client secret</p>
         </span><span class="nt">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span></code></pre>
+
+          <h1 id="users">Users</h1>
+
+<h2 id="register-a-new-user">Register a new user</h2>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>Remember to send access_token(client) along</p>
+
+<p><code class="prettyprint">POST /users</code>
+Parameter | Type | Description
+&mdash;&mdash;&mdash;- | &mdash;&mdash;- | &mdash;&mdash;&ndash;
+username | String | User username
+password | String | User password
+password_confirmation | String | Password confirmation same as password
+firstName | String | User Firstname</p>
+
+<h2 id="login-a-user">Login a user</h2>
+
+<h2 id="account-verification">Account Verification</h2>
+
+<h2 id="resending-verification-code">Resending Verification Code</h2>
+
+<h2 id="password-reset">Password Reset</h2>
+
+<h2 id="changing-password">Changing Password</h2>
+
+<h2 id="updating-user">Updating User</h2>
 
           <h1 id="errors">Errors</h1>
 
@@ -211,34 +254,6 @@ client_secret | String | Your client secret</p>
 <td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
 </tr>
 </tbody></table>
-
-          <h1 id="users">Users</h1>
-
-<h2 id="register-a-new-user">Register a new user</h2>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p>Remember to send access_token(client) along</p>
-
-<p><code class="prettyprint">POST /users</code>
-Parameter | Type | Description
-&mdash;&mdash;&mdash;- | &mdash;&mdash;- | &mdash;&mdash;&ndash;
-username | String | User username
-password | String | User password
-password_confirmation | String | Password confirmation same as password
-firstName | String | User Firstname</p>
-
-<h2 id="login-a-user">Login a user</h2>
-
-<h2 id="account-verification">Account Verification</h2>
-
-<h2 id="resending-verification-code">Resending Verification Code</h2>
-
-<h2 id="password-reset">Password Reset</h2>
-
-<h2 id="changing-password">Changing Password</h2>
-
-<h2 id="updating-user">Updating User</h2>
 
       </div>
       <div class="dark-box">
