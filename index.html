@@ -191,17 +191,138 @@ password | String | User password
 password_confirmation | String | Password confirmation same as password
 firstName | String | User Firstname</p>
 
-<h2 id="login-a-user">Login a user</h2>
-
 <h2 id="account-verification">Account Verification</h2>
 
-<h2 id="resending-verification-code">Resending Verification Code</h2>
+<p>Upon registration the user gets an email with a link with a token to verify his/her email address
+&lsquo;GET /users/verification/email/token&rsquo;</p>
+<pre class="highlight shell"><code>curl <span class="s2">"/users/verification/email/token"</span>
+  -H <span class="s2">"Authorization: access_token"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"igD3kqp7sN8aSZtPBBNLLrVcYe0zHAQk6xnUdwd5"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="login-a-user">Login a user</h2>
+
+<p><code class="prettyprint">POST /login</code></p>
+
+<p>Response access_token that should then be used to make subsequent requests </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>String</td>
+<td>User username</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>User password</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>String</td>
+<td>User Firstname</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>String</td>
+<td>User Firstname</td>
+</tr>
+</tbody></table>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.connecthealth.io/login"</span>
+  -H <span class="s2">"Authorization: access_token"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"igD3kqp7sN8aSZtPBBNLLrVcYe0zHAQk6xnUdwd5"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h2 id="password-reset">Password Reset</h2>
 
+<p><code class="prettyprint">POST /password/send-reminder</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>User email</td>
+</tr>
+</tbody></table>
+
+<p><code class="prettyprint">POST /password/reset</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>User email</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>New User password</td>
+</tr>
+<tr>
+<td>password_confirmation</td>
+<td>String</td>
+<td>New User password confirmation. Same as password</td>
+</tr>
+<tr>
+<td>token</td>
+<td>String</td>
+<td>Reset token that was sent to user&rsquo;s email</td>
+</tr>
+</tbody></table>
+
 <h2 id="changing-password">Changing Password</h2>
 
+<p><code class="prettyprint">POST /users/{id}/change-password</code></p>
+
 <h2 id="updating-user">Updating User</h2>
+
+<p><code class="prettyprint">POST /users/{id}</code></p>
+
+<h2 id="show-user">Show User</h2>
+
+<p><code class="prettyprint">GET /users/{id}</code></p>
+
+<h2 id="deleting-user">Deleting User</h2>
+
+<p><code class="prettyprint">DELETE /users/{id}</code></p>
 
           <h1 id="errors">Errors</h1>
 
