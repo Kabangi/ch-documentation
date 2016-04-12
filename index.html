@@ -160,8 +160,16 @@
 <td></td>
 </tr>
 </tbody></table>
-<pre class="highlight shell"><code><span class="c"># This is some Python code!</span>
-<span class="gp">&gt; </span>This is a code annotation. It will appear <span class="k">in </span>the area to the right, next to the code samples.
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.connecthealth.io/v1/oauth/client/access-token"</span>
+  -H <span class="s2">"Authorization: access_token"</span>
+
+    &gt; The above <span class="nb">command </span>returns JSON structured like this:
+
+    <span class="o">{</span>
+        <span class="s2">"access_token"</span>: <span class="s2">"igD3kqp7sN8aSZtPBBNLLrVcYe0zHAQk6xnUdwd5"</span>,
+        <span class="s2">"token_type"</span>: <span class="s2">"Bearer"</span>,
+        <span class="s2">"expires_in"</span>: 3600
+    <span class="o">}</span>
 </code></pre>
 
 <h1 id="users">Users</h1>
