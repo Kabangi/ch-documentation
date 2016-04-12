@@ -128,15 +128,13 @@
 
 <h1 id="authentication">Authentication</h1>
 
-<p>ConnectHealth uses API keys to allow access to the API. You can register a new ConnectHealth API key by contact us <code class="prettyprint">support@connecthealth.io</code>.</p>
+<p>ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your &ldquo;client_id&rdquo; and &ldquo;client_secret&rdquo;. You can register a new ConnectHealth Client Id and client Secret keys by contact us <code class="prettyprint">support@connecthealth.io</code>.</p>
 
-<p>ConnectHealth expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>ConnectHealth expects for the access_token to be included in all API requests to the server. Either in a header or as a query string &lsquo;access_token=&rsquo;</p>
 
-<p><code class="prettyprint">Authorization: myapikey</code></p>
+<p><code class="prettyprint">Authorization: access_token</code></p>
 
-<aside class="notice">
-You must replace <code>myapikey</code> with your personal API key.
-</aside>
+<h2 id="generating-access-token">Generating access token</h2>
 
 <h1 id="users">Users</h1>
 
