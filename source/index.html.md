@@ -8,8 +8,8 @@ toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
 
 includes:
-  - errors
   - users
+  - errors
 
 search: true
 ---
@@ -36,8 +36,9 @@ ConnectHealth expects access_token to be included in all API requests to the ser
 ## Generating access token
 ### HTTP Request
 `POST /oauth/client/access-token`
+
 Parameter | Type | Description
----------- | ------- | --------
+---------- | --------- | --------
 client_id | String | Your client id
 client_secret | String | Your client secret
 
