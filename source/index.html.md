@@ -43,8 +43,16 @@ client_id | String -- Your client id
 client_secret | String -- Your client secret
 
 ```shell
-# This is some Python code!
-> This is a code annotation. It will appear in the area to the right, next to the code samples.
+curl "https://api.connecthealth.io/v1/oauth/client/access-token"
+  -H "Authorization: access_token"
+
+	> The above command returns JSON structured like this:
+	
+	{
+	    "access_token": "igD3kqp7sN8aSZtPBBNLLrVcYe0zHAQk6xnUdwd5",
+	    "token_type": "Bearer",
+	    "expires_in": 3600
+	}
 ```
 
 
