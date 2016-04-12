@@ -9,10 +9,7 @@ toc_footers:
 
 includes:
   - errors
-<<<<<<< HEAD
   - users
-=======
->>>>>>> master
 
 search: true
 ---
@@ -49,6 +46,7 @@ curl "https://api.connecthealth.io/v1/oauth/client/access-token"
   -H "Authorization: access_token"
 ```
 > The above command returns JSON structured like this:
+
 ```json
 
 	{
