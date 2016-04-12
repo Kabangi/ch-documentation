@@ -9,6 +9,10 @@ toc_footers:
 
 includes:
   - users
+  - doctors
+  - patients
+  - practices
+  - appointments
   - errors
 
 search: true
