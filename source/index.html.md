@@ -42,7 +42,9 @@ Parameter | Type | Description
 client_id | String -- Your client id
 client_secret | String -- Your client secret
 
-``` Response
+``` Request examples
+
+```
 
 
 # Users
