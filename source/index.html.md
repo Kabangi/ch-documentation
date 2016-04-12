@@ -2,7 +2,7 @@
 title: API Reference
 
 language_tabs:
-  - Request examples
+  - shell
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -42,8 +42,9 @@ Parameter | Type | Description
 client_id | String -- Your client id
 client_secret | String -- Your client secret
 
-``` Request examples
-
+```shell
+# This is some Python code!
+> This is a code annotation. It will appear in the area to the right, next to the code samples.
 ```
 
 
