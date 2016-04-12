@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Connect Health API Reference
 
 language_tabs:
   - shell
