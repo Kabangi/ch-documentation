@@ -132,7 +132,7 @@
 
 <p>ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your &ldquo;client_id&rdquo; and &ldquo;client_secret&rdquo;. To register for a Client Id and client Secret contact us <code class="prettyprint">support@connecthealth.io</code>.</p>
 
-<p>ConnectHealth expects access_token to be included in all API requests to the server. Either in a header or as a query string &lsquo;access_token=&rsquo;. For user specific endpoints include the access token issued upon login. Check loggin a user section</p>
+<p>ConnectHealth expects access_token to be included in all API requests to the server. Either in a header or as a query string &lsquo;access_token=&rsquo;. For user specific endpoints include the access token issued upon login. Check login a user section</p>
 
 <p><code class="prettyprint">Authorization: access_token</code></p>
 
@@ -140,26 +140,11 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST /oauth/client/access-token</code></p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>client_id</td>
-<td>String &ndash; Your client id</td>
-<td></td>
-</tr>
-<tr>
-<td>client_secret</td>
-<td>String &ndash; Your client secret</td>
-<td></td>
-</tr>
-</tbody></table>
+<p><code class="prettyprint">POST /oauth/client/access-token</code>
+Parameter | Type | Description
+&mdash;&mdash;&mdash;- | &mdash;&mdash;- | &mdash;&mdash;&ndash;
+client_id | String | Your client id
+client_secret | String | Your client secret</p>
 <pre class="highlight shell"><code>curl <span class="s2">"https://api.connecthealth.io/v1/oauth/client/access-token"</span>
   -H <span class="s2">"Authorization: access_token"</span>
 
@@ -175,6 +160,18 @@
 <h1 id="users">Users</h1>
 
 <h2 id="register-a-new-user">Register a new user</h2>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>Remember to send access_token(client) along</p>
+
+<p><code class="prettyprint">POST /users</code>
+Parameter | Type | Description
+&mdash;&mdash;&mdash;- | &mdash;&mdash;- | &mdash;&mdash;&ndash;
+username | String | User username
+password | String | User password
+password_confirmation | String | Password confirmation same as password
+firstName | String | User Firstname</p>
 
 <h2 id="login-a-user">Login a user</h2>
 
