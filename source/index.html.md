@@ -23,14 +23,26 @@ ConnectHealth web services typically follow the REST model for web services. Acc
 
 You can view the response examples in the dark area to the right.
 
+The base url for all endpoints is `https://api.connecthealth.io/v1`
+
 # Authentication
 
-ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your "client_id" and "client_secret". You can register a new ConnectHealth Client Id and client Secret keys by contact us `support@connecthealth.io`.
+ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your "client_id" and "client_secret". To register for a Client Id and client Secret contact us `support@connecthealth.io`.
 
-ConnectHealth expects for the access_token to be included in all API requests to the server. Either in a header or as a query string 'access_token='
+ConnectHealth expects access_token to be included in all API requests to the server. Either in a header or as a query string 'access_token='. For user specific endpoints include the access token issued upon login. Check loggin a user section
 
 `Authorization: access_token`
 ## Generating access token
+
+### HTTP Request
+`POST /oauth/client/access-token`
+
+Parameter | Type | Description
+---------- | ------- | --------
+client_id | String -- Your client id
+client_secret | String -- Your client secret
+
+``` Response
 
 
 # Users
