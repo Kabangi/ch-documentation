@@ -126,31 +126,52 @@
 
 <p>You can view the response examples in the dark area to the right.</p>
 
+<p>The base url for all endpoints is <code class="prettyprint">https://api.connecthealth.io/v1</code></p>
+
 <h1 id="authentication">Authentication</h1>
 
-<p>ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your &ldquo;client_id&rdquo; and &ldquo;client_secret&rdquo;. You can register a new ConnectHealth Client Id and client Secret keys by contact us <code class="prettyprint">support@connecthealth.io</code>.</p>
+<p>ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your &ldquo;client_id&rdquo; and &ldquo;client_secret&rdquo;. To register for a Client Id and client Secret contact us <code class="prettyprint">support@connecthealth.io</code>.</p>
 
-<p>ConnectHealth expects for the access_token to be included in all API requests to the server. Either in a header or as a query string &lsquo;access_token=&rsquo;</p>
+<p>ConnectHealth expects access_token to be included in all API requests to the server. Either in a header or as a query string &lsquo;access_token=&rsquo;. For user specific endpoints include the access token issued upon login. Check loggin a user section</p>
 
 <p><code class="prettyprint">Authorization: access_token</code></p>
 
 <h2 id="generating-access-token">Generating access token</h2>
 
-<h1 id="users">Users</h1>
+<h3 id="http-request">HTTP Request</h3>
 
-<h2 id="register-a-new-user">Register a new user</h2>
+<p><code class="prettyprint">POST /oauth/client/access-token</code></p>
 
-<h2 id="login-a-user">Login a user</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>client_id</td>
+<td>String &ndash; Your client id</td>
+<td></td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>String &ndash; Your client secret</td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="highlight plaintext"><code>
 
-<h2 id="account-verification">Account Verification</h2>
+# Users
 
-<h2 id="resending-verification-code">Resending Verification Code</h2>
-
-<h2 id="password-reset">Password Reset</h2>
-
-<h2 id="changing-password">Changing Password</h2>
-
-<h2 id="updating-user">Updating User</h2>
+## Register a new user
+## Login a user
+## Account Verification
+## Resending Verification Code
+## Password Reset
+## Changing Password
+## Updating User
+</code></pre>
 
           <h1 id="errors">Errors</h1>
 
