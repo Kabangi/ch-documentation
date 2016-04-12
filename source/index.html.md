@@ -29,25 +29,23 @@ The base url for all endpoints is `https://api.connecthealth.io/v1`
 
 ConnectHealth implements 0auth2.0 hence to access the API you need to first request an access token using your "client_id" and "client_secret". To register for a Client Id and client Secret contact us `support@connecthealth.io`.
 
-ConnectHealth expects access_token to be included in all API requests to the server. Either in a header or as a query string 'access_token='. For user specific endpoints include the access token issued upon login. Check loggin a user section
+ConnectHealth expects access_token to be included in all API requests to the server. Either in a header or as a query string 'access_token='. For user specific endpoints include the access token issued upon login. Check login a user section
 
 `Authorization: access_token`
 ## Generating access token
-
 ### HTTP Request
 `POST /oauth/client/access-token`
-
 Parameter | Type | Description
 ---------- | ------- | --------
-client_id | String -- Your client id
-client_secret | String -- Your client secret
+client_id | String | Your client id
+client_secret | String | Your client secret
 
 ```shell
 curl "https://api.connecthealth.io/v1/oauth/client/access-token"
   -H "Authorization: access_token"
 
 	> The above command returns JSON structured like this:
-	
+
 	{
 	    "access_token": "igD3kqp7sN8aSZtPBBNLLrVcYe0zHAQk6xnUdwd5",
 	    "token_type": "Bearer",
@@ -59,6 +57,17 @@ curl "https://api.connecthealth.io/v1/oauth/client/access-token"
 # Users
 
 ## Register a new user
+### HTTP Request
+Remember to send access_token(client) along
+
+`POST /users`
+Parameter | Type | Description
+---------- | ------- | --------
+username | String | User username
+password | String | User password
+password_confirmation | String | Password confirmation same as password
+firstName | String | User Firstname
+
 ## Login a user
 ## Account Verification
 ## Resending Verification Code
