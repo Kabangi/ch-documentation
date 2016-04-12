@@ -9,7 +9,10 @@ toc_footers:
 
 includes:
   - errors
+<<<<<<< HEAD
   - users
+=======
+>>>>>>> master
 
 search: true
 ---
