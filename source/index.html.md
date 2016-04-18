@@ -13,6 +13,7 @@ includes:
   - patients
   - practices
   - appointments
+  - sms
   - errors
 
 search: true
