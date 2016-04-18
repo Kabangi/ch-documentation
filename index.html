@@ -355,6 +355,47 @@
 
           <h1 id="appointments">Appointments</h1>
 
+          <h1 id="sms">Sms</h1>
+
+<h2 id="send-a-sms-to-a-user">Send a sms to a user</h2>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p>Remember to send access_token along</p>
+
+<p><code class="prettyprint">POST /sms</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>recipients</td>
+<td>String or Array</td>
+<td>Intended receipients</td>
+</tr>
+<tr>
+<td>message</td>
+<td>String</td>
+<td>Message to user</td>
+</tr>
+</tbody></table>
+<pre class="highlight shell"><code>curl <span class="s2">"/sms"</span>
+  -H <span class="s2">"Authorization: access_token"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Message sent successfully"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+
           <h1 id="errors">Errors</h1>
 
 <p>COnnectHealth API uses the following error codes:</p>
