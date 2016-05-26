@@ -1,7 +1,7 @@
-#Practices
-## Register a new practice
+#Schedules
+## Register a new schedule
 ```shell
-curl "/practices"
+curl "/schedules"
   -H "Authorization: Bearer {access_token}"
   -F 'name=name' \
 ```
@@ -13,7 +13,7 @@ curl "/practices"
     ]
 }
 ```
-`POST /practices`
+`POST /schedules`
 Requires the access token to be that of an authenticated user
 
 Parameters | Required | Description
@@ -23,7 +23,7 @@ Parameters | Required | Description
 ## List Doctors
 
 ```shell
-curl "/practices"
+curl "/schedules"
   -H "Authorization: Bearer {access_token}"
 ```
 
@@ -34,11 +34,11 @@ curl "/practices"
 }
 ```
 
-`GET /practices`
+`GET /schedules`
 
-## Show a single practice
+## Show a single schedule
 ```shell
-curl "/practices/10"
+curl "/schedules/10"
   -H "Authorization: Bearer {access_token}"
 ```
 ```json
@@ -49,11 +49,11 @@ curl "/practices/10"
 }
 ```
 
-`GET /practices/{id}`
+`GET /schedules/{id}`
 
-## Update practice
+## Update schedule
 ```shell
-curl "/practices/1"
+curl "/schedules/1"
   -H "Authorization: Bearer {access_token}"
   -F 'name=name' \
 ```
@@ -65,15 +65,15 @@ curl "/practices/1"
     ]
 }
 ```
-`POST /practices/{id}`
-Requires the access token to be that of an authenticated user for either the admin or the practice owner
+`POST /schedules/{id}`
+Requires the access token to be that of an authenticated user for either the admin or the schedule owner
 
 Parameters | Required | Description
 ---------- | ------- | ------------
 
-## Search for practices
+## Search for schedules
 ```shell
-curl "/practices/search?"
+curl "/schedules/search?"
   -H "Authorization: Bearer {access_token}"
 ```
 
@@ -85,14 +85,14 @@ curl "/practices/search?"
 }
 ```
 
-`GET /practices/search?field=value&field2=value`
+`GET /schedules/search?field=value&field2=value`
 
 Parameters | Required | Description
 ---------- | ------- | ------------
 
-## Delete practice
+## Delete schedule
 ```shell
-curl "/practices/{id}"
+curl "/schedules/{id}"
   -H "Authorization: Bearer {access_token}"
 ```
 > Response:
@@ -102,8 +102,8 @@ curl "/practices/{id}"
         "message": "Event was deleted"
     }
 ```
-`DELETE /practices/{id}`
+`DELETE /schedules/{id}`
 
-Requires the access token to be that of an authenticated user for either the admin or the practice owner
+Requires the access token to be that of an authenticated user for either the admin or the schedule owner
 
 

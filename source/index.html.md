@@ -12,6 +12,7 @@ includes:
   - doctors
   - patients
   - practices
+  - schedules
   - appointments
   - sms
   - errors
