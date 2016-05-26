@@ -361,9 +361,11 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p>Remember to send access_token along</p>
+<p>Remember to send access_token along
+Use this end point to also send bulk messages and non bulk messages
+<code class="prettyprint">POST /sms</code></p>
 
-<p><code class="prettyprint">POST /sms</code></p>
+<p>Sending a single message to multiple users or one</p>
 
 <table><thead>
 <tr>
@@ -375,12 +377,28 @@
 <tr>
 <td>recipients</td>
 <td>String or Array</td>
-<td>Intended receipients</td>
+<td>Intended receipients or a single receipient as string</td>
 </tr>
 <tr>
 <td>message</td>
 <td>String</td>
 <td>Message to user</td>
+</tr>
+</tbody></table>
+
+<p>Sending messages each user with his own custom message</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sms</td>
+<td>Object i.e {number:value,message:value}</td>
+<td>Messages payload with equivalent reciepient</td>
 </tr>
 </tbody></table>
 <pre class="highlight shell"><code>curl <span class="s2">"/sms"</span>
